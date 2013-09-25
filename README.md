@@ -1,13 +1,14 @@
 # 漫画图片分割
 
 一般而言，我们下载下来的漫画都是两页并排扫描的，比如
-!(https://github.com/laike9m/split_p/blob/master/original.jpg "original image")
+
+![whaever](https://github.com/laike9m/split_p/blob/master/original.jpg "original image")
 
 阅读起来非常不方便。于是就有了这么一个把图片分开的工具。之后就变成两张图了:
 
-![whatever](https://github.com/laike9m/split_p/blob/master/splitted_1.jpg "splitted image 1")
+![whatever](https://github.com/laike9m/split_p/blob/master/splitted_1.jpg  "splitted image 1")
 
-![whatever](https://github.com/laike9m/split_p/blob/master/splitted_2.jpg "splitted image 1")
+![whatever](/blob/master/splitted_2.jpg "splitted image 1")
 
 ### 使用
 脚本的最后两行如下。自己把comicdir替换成本地漫画的根目录路径即可。
