@@ -104,10 +104,5 @@ def main(comicdir,mode=RIGHT2LEFT):
     
 if __name__ == '__main__':
     mode = RIGHT2LEFT
-    comicdir = r'C:\Users\dell\Downloads\[藤坂空樹] ナースを彼女にする方法 4'
-    #comicdir, mode = (r'C:\Users\dell\Desktop\[comic]火鸟.Vol.01-18(ED2000.COM)', LEFT2RIGHT)
-	#comicdir = r'C:\Users\dell\Desktop\genshiken'
-    #comicdir = r'C:\Users\dell\Downloads\疯狂怪医芙兰' 
-    #comicdir = r'C:\Users\dell\Desktop\�?��与宫村君'
-    #comicdir = r'C:\Users\dell\Desktop\[黑咪漫畫組][谷川ニコ][喪女]'
+	comicdir = ''
     main(comicdir, mode)
