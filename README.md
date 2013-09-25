@@ -1,17 +1,17 @@
-ï»¿# æ¼«ç”»å›¾ç‰‡åˆ†å‰²
+# Âş»­Í¼Æ¬·Ö¸î
 
-ä¸€èˆ¬è€Œè¨€ï¼Œæˆ‘ä»¬ä¸‹è½½ä¸‹æ¥çš„æ¼«ç”»éƒ½æ˜¯ä¸¤é¡µå¹¶æ’æ‰«æçš„ï¼Œæ¯”å¦‚
+Ò»°ã¶øÑÔ£¬ÎÒÃÇÏÂÔØÏÂÀ´µÄÂş»­¶¼ÊÇÁ½Ò³²¢ÅÅÉ¨ÃèµÄ£¬±ÈÈç
 !(https://github.com/laike9m/split_p/blob/master/original.jpg "original image")
 
-é˜…è¯»èµ·æ¥éå¸¸ä¸æ–¹ä¾¿ã€‚äºæ˜¯å°±æœ‰äº†è¿™ä¹ˆä¸€ä¸ªæŠŠå›¾ç‰‡åˆ†å¼€çš„å·¥å…·ã€‚ä¹‹åå°±å˜æˆä¸¤å¼ å›¾äº†:
+ÔÄ¶ÁÆğÀ´·Ç³£²»·½±ã¡£ÓÚÊÇ¾ÍÓĞÁËÕâÃ´Ò»¸ö°ÑÍ¼Æ¬·Ö¿ªµÄ¹¤¾ß¡£Ö®ºó¾Í±ä³ÉÁ½ÕÅÍ¼ÁË:
 
-!(https://github.com/laike9m/split_p/blob/master/splitted_1.jpg "splitted image 1")
+![whatever](https://github.com/laike9m/split_p/blob/master/splitted_1.jpg "splitted image 1")
 
-!(https://github.com/laike9m/split_p/blob/master/splitted_2.jpg "splitted image 1")
+![whatever](https://github.com/laike9m/split_p/blob/master/splitted_2.jpg "splitted image 1")
 
-### ä½¿ç”¨
-è„šæœ¬çš„æœ€åä¸¤è¡Œå¦‚ä¸‹ã€‚è‡ªå·±æŠŠcomicdiræ›¿æ¢æˆæœ¬åœ°æ¼«ç”»çš„æ ¹ç›®å½•è·¯å¾„å³å¯ã€‚
-å¦‚æœæ¼«ç”»é˜…è¯»æ–¹å¼æ˜¯ä»å·¦å‘å³ï¼Œæ”¹ä¸º`mode=LEFT2RIGHT`
+### Ê¹ÓÃ
+½Å±¾µÄ×îºóÁ½ĞĞÈçÏÂ¡£×Ô¼º°ÑcomicdirÌæ»»³É±¾µØÂş»­µÄ¸ùÄ¿Â¼Â·¾¶¼´¿É¡£
+Èç¹ûÂş»­ÔÄ¶Á·½Ê½ÊÇ´Ó×óÏòÓÒ£¬¸ÄÎª`mode=LEFT2RIGHT`
 
 	comicdir = ''
     main(comicdir, mode)

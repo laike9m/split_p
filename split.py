@@ -104,5 +104,5 @@ def main(comicdir,mode=RIGHT2LEFT):
     
 if __name__ == '__main__':
     mode = RIGHT2LEFT
-	comicdir = ''
+    comicdir = ''
     main(comicdir, mode)
