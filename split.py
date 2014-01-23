@@ -14,6 +14,7 @@ from PIL import Image
 import os
 import re
 from glob import glob
+import sys
 
 global RIGHT2LEFT, LEFT2RIGHT   # 定义页面排版顺序,先左后有或先右后左
 RIGHT2LEFT = 1
@@ -103,6 +104,8 @@ def main(comicdir,mode=RIGHT2LEFT):
         
     
 if __name__ == '__main__':
-    mode = RIGHT2LEFT
     comicdir = r'C:\Users\dell\Desktop\赌博堕天录'
+    if len(sys.argv) > 1:
+	      comicdir = sys.argv[1]
+    mode = RIGHT2LEFT
     main(comicdir, mode)
