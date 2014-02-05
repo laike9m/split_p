@@ -2,13 +2,9 @@
 
 有时候，我们下载下来的漫画是两页并排扫描的，比如
 
-![githubimage_big](https://github.com/laike9m/split_p/raw/master/original.jpg "original image")
+![](https://github.com/laike9m/split_p/raw/master/original.jpg "original image")
 
-阅读起来非常不方便。于是就有了这么一个把图片分开的工具。之后就变成两张图了:
-
-<img style="max-width: 300px;" src="https://github.com/laike9m/split_p/raw/master/splitted_1.jpg" />
-
-<img style="max-width: 300px;" src="https://github.com/laike9m/split_p/raw/master/splitted_2.jpg" />
+阅读起来非常不方便。于是就有了这么一个把图片分开的工具。之后就变成两张图了。
 
 ### 使用
 
@@ -30,3 +26,8 @@ $ split.py path_to_manga
 
 Assume the original path to manga is `~/Documents/manga`   
 then splitted manga reside in `~/Documents/manga_splitted` 
+
+.foo {
+  text-align: center;
+  width: 100px;
+}
