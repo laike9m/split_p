@@ -6,9 +6,9 @@
 
 阅读起来非常不方便。于是就有了这么一个把图片分开的工具。之后就变成两张图了:
 
-<img style="width: 300px" src="https://github.com/laike9m/split_p/raw/master/splitted_1.jpg">
+<img style="max-width: 300px;" src="https://github.com/laike9m/split_p/raw/master/splitted_1.jpg" />
 
-<img style="width: 300px" src="https://github.com/laike9m/split_p/raw/master/splitted_2.jpg">
+<img style="max-width: 300px;" src="https://github.com/laike9m/split_p/raw/master/splitted_2.jpg" />
 
 ### 使用
 
