@@ -1,27 +1,32 @@
-﻿# 漫画图片分割
+# 漫画图片分割
 
-一般而言，我们下载下来的漫画都是两页并排扫描的，比如
+有时候，我们下载下来的漫画是两页并排扫描的，比如
 
 ![githubimage_big](https://github.com/laike9m/split_p/raw/master/original.jpg "original image")
 
 阅读起来非常不方便。于是就有了这么一个把图片分开的工具。之后就变成两张图了:
 
-![githubimage](https://github.com/laike9m/split_p/raw/master/splitted_1.jpg  "splitted image 1")
+<img style="width: 300px" src="https://github.com/laike9m/split_p/raw/master/splitted_1.jpg">
 
-![githubimage](https://github.com/laike9m/split_p/raw/master/splitted_2.jpg "splitted image 1")
+<img style="width: 300px" src="https://github.com/laike9m/split_p/raw/master/splitted_2.jpg">
 
 ### 使用
-脚本的最后两行如下。自己把comicdir替换成本地漫画的根目录路径即可。
-如果漫画阅读方式是从左向右，改为`mode=LEFT2RIGHT`
 
-	comicdir = ''
-    main(comicdir, mode)
+```bash   
+$ split.py path_to_manga
+```
+
+若原来的漫画路径为 `~/Documents/manga`  
+则分割后的漫画路径为 `~/Documents/manga_splitted`
 
 # Image split for manga reading
 
-Downloaded manga usually contains two pages in one image,which makes painful reading.This tool separate the original images.
+Downloaded manga sometimes contains two pages in one image, which makes painful reading.This tool separate the original images.
 
-### How to use
-Open the `split.py` file, custom the last two lines.
+### Usage  
+```bash   
+$ split.py path_to_manga
+```
 
-You should fill `comicdir` with your own comic directory.Note that if left part of the original image precedes the right part, you should change `mode` to `LEFT2RIGHT`.
+Assume the original path to manga is `~/Documents/manga`   
+then splitted manga reside in `~/Documents/manga_splitted` 

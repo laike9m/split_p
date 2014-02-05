@@ -1,4 +1,5 @@
-'''
+﻿# -*- coding:utf-8 -*-
+"""
 输入图片根目录录复制出一个完整的文件夹及子文件夹
 假定漫画的存储结构如下
 学园默示录
@@ -9,14 +10,16 @@
 这样不会有更多层的目录.这个假设暂时看来是合理的
 如果图片本身height就大于width,那么就改变原图
 需要注意图片排版是从左到右还是从右到左,默认为RIGHT2LEFT
-'''
-from PIL import Image
+"""
+
 import os
 import re
 from glob import glob
 import sys
 
-global RIGHT2LEFT, LEFT2RIGHT   # 定义页面排版顺序,先左后有或先右后左
+from PIL import Image
+
+global RIGHT2LEFT, LEFT2RIGHT   # 定义页面排版顺序,先左后右或先右后左
 RIGHT2LEFT = 1
 LEFT2RIGHT = 2
 
@@ -99,13 +102,19 @@ def main(comicdir,mode=RIGHT2LEFT):
             image.convert('RGB').save(save_dir,'jpeg')
         num_splitted += 1
         if not num_splitted % 100:
-            print('进度%s/%s' % (num_splitted,num_all))
+            print('Progress %s/%s' % (num_splitted,num_all))
         
         
     
 if __name__ == '__main__':
-    comicdir = r'C:\Users\dell\Desktop\赌博堕天录'
-    if len(sys.argv) > 1:
-	      comicdir = sys.argv[1]
+    if len(sys.argv) == 2:
+	    comicdir = sys.argv[1]
+    elif len(sys.argv) == 1:
+        print("You should provide manga path as an argument.\ne.g. split.py ~/Documents/manga")
+        exit(0)
+    else:
+        print("too many arguments.")
+        exit(0)
+		
     mode = RIGHT2LEFT
     main(comicdir, mode)
