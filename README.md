@@ -26,8 +26,3 @@ $ split.py path_to_manga
 
 Assume the original path to manga is `~/Documents/manga`   
 then splitted manga reside in `~/Documents/manga_splitted` 
-
-.foo {
-  text-align: center;
-  width: 100px;
-}
