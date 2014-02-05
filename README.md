@@ -26,3 +26,8 @@ $ split.py path_to_manga
 
 Assume the original path to manga is `~/Documents/manga`   
 then splitted manga reside in `~/Documents/manga_splitted` 
+
+### Requirements
+[PIL][pil](Python 2) or [Pillow][pillow](Python 3)
+[pil]: http://www.pythonware.com/products/pil/
+[pillow]: https://pypi.python.org/pypi/Pillow/2.3.0
