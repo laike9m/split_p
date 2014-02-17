@@ -14,8 +14,9 @@
 
 import os
 import re
-from glob import glob
 import sys
+
+from glob import glob
 
 from PIL import Image
 
@@ -30,16 +31,17 @@ def getThreeDigit(num):
         return str(num)
     else:
         if num < 10: 
-            return '00'+str(num)
+            return '00' + str(num)
         elif num > 9 and num < 100:
-            return '0'+str(num)
+            return '0' + str(num)
         elif num > 99:
             return str(num)
         else:
             return False
 
-def main(comicdir,mode=RIGHT2LEFT):
-    '''入口函数'''
+
+def main(comicdir, mode=RIGHT2LEFT):
+    """入口函数"""
     (head,comicname) = os.path.split(comicdir)
     new_root = comicname + '_splitted'
     if not os.path.exists('%s\%s' % (head,new_root)):
@@ -65,16 +67,14 @@ def main(comicdir,mode=RIGHT2LEFT):
     num_splitted = 0
 
     for pic in pics:
-        # 找出图片的数字序号
+        """ 找出图片的数字序号 """
         image = Image.open(pic)
-        size = image.size   #size = (width,height)
+        size = image.size   # size = (width,height)
         width = size[0]
         height = size[1]
         
         if width > height:  # do split
-            result = re.finditer(r'\d+',pic)
-            for number in result:
-                pass
+						number = re.findall(r"\d+", pic)[-1]  # match last occurence of \d+
             p_ID = number.group()
             start = number.start()
             end = number.end()
@@ -97,18 +97,17 @@ def main(comicdir,mode=RIGHT2LEFT):
             right_image = image.crop(right_image_box)
             left_image.convert('RGB').save(save_left_dir,'jpeg')
             right_image.convert('RGB').save(save_right_dir,'jpeg')
-        else:# 直接保存进新的路径即可
+        else:  # 直接保存进新的路径即可
             save_dir = pic.replace(comicname, new_root, 1)
             image.convert('RGB').save(save_dir,'jpeg')
         num_splitted += 1
         if not num_splitted % 100:
             print('Progress %s/%s' % (num_splitted,num_all))
         
-        
     
 if __name__ == '__main__':
     if len(sys.argv) == 2:
-	    comicdir = sys.argv[1]
+				comicdir = sys.argv[1]
     elif len(sys.argv) == 1:
         print("You should provide manga path as an argument.\ne.g. split.py ~/Documents/manga")
         exit(0)
