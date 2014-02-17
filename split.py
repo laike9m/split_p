@@ -107,7 +107,7 @@ def main(comicdir, mode=RIGHT2LEFT):
     
 if __name__ == '__main__':
     if len(sys.argv) == 2:
-				comicdir = sys.argv[1]
+        comicdir = sys.argv[1]
     elif len(sys.argv) == 1:
         print("You should provide manga path as an argument.\ne.g. split.py ~/Documents/manga")
         exit(0)
