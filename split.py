@@ -74,7 +74,7 @@ def main(comicdir, mode=RIGHT2LEFT):
         height = size[1]
         
         if width > height:  # do split
-						number = re.findall(r"\d+", pic)[-1]  # match last occurence of \d+
+            number = re.findall(r"\d+", pic)[-1]  # match last occurence of \d+
             p_ID = number.group()
             start = number.start()
             end = number.end()
