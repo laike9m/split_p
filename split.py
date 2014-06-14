@@ -1,4 +1,4 @@
-﻿# -*- coding:utf-8 -*-
+﻿# coding:utf-8
 """
 输入图片根目录录复制出一个完整的文件夹及子文件夹
 假定漫画的存储结构如下
@@ -18,7 +18,7 @@ import sys
 
 from glob import glob
 
-from PIL import Image
+from PIL import Image, ImageFile
 
 global RIGHT2LEFT, LEFT2RIGHT   # 定义页面排版顺序,先左后右或先右后左
 RIGHT2LEFT = 1
@@ -58,7 +58,7 @@ def main(comicdir, mode=RIGHT2LEFT):
     pics = []
     
     # glob会将[..]认为是匹配方括号中出现的字符,所以需要改为'['->'[[]',']'->'[]]'
-    comicdir = re.sub(r'(?P<squarebracket>\[|\])', '[\g<squarebracket>]', comicdir)    
+    comicdir = re.sub(r'(?P<squarebracket>\[|\])', '[\g<squarebracket>]', comicdir)
     for type in types:
         pics.extend(glob(r'%s\%s' % (comicdir, type)))  # 不再使用生成器,直接用List
         pics.extend(glob(r'%s\*\%s' % (comicdir, type)))
@@ -68,7 +68,13 @@ def main(comicdir, mode=RIGHT2LEFT):
 
     for pic in pics:
         """ 找出图片的数字序号 """
-        image = Image.open(pic)
+        # from http://stackoverflow.com/questions/12984426/python-pil-ioerror-image-file-truncated-with-big-images
+        # solves IOError: image file is truncated (2 bytes not processed).
+        ImageFile.LOAD_TRUNCATED_IMAGES = True
+        try:
+            image = Image.open(pic)
+        except OSError:
+            continue  # some pics are not downloaded correctly and has 0 size thus causing OSError
         size = image.size   # size = (width,height)
         width = size[0]
         height = size[1]
@@ -114,6 +120,6 @@ if __name__ == '__main__':
     else:
         print("too many arguments.")
         exit(0)
-		
+
     mode = RIGHT2LEFT
     main(comicdir, mode)
